@@ -1,0 +1,5 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "Howells Bundler No DOM Library Monorepo",
+  "extends": "@total-typescript/tsconfig/bundler/no-dom/library-monorepo"
+}

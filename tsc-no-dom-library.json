@@ -1,0 +1,5 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "Howells TSC No DOM Library",
+  "extends": "@total-typescript/tsconfig/tsc/no-dom/library"
+}

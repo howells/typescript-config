@@ -1,0 +1,30 @@
+{
+  "name": "@howells/tsconfig",
+  "version": "0.1.0",
+  "description": "Pinned wrappers and overlays around @total-typescript/tsconfig.",
+  "license": "MIT",
+  "files": [
+    "*.json",
+    "README.md"
+  ],
+  "dependencies": {
+    "@total-typescript/tsconfig": "1.0.4"
+  },
+  "exports": {
+    "./package.json": "./package.json",
+    "./bundler-dom-app": "./bundler-dom-app.json",
+    "./bundler-dom-library": "./bundler-dom-library.json",
+    "./bundler-dom-library-monorepo": "./bundler-dom-library-monorepo.json",
+    "./bundler-no-dom-app": "./bundler-no-dom-app.json",
+    "./bundler-no-dom-library": "./bundler-no-dom-library.json",
+    "./bundler-no-dom-library-monorepo": "./bundler-no-dom-library-monorepo.json",
+    "./tsc-dom-app": "./tsc-dom-app.json",
+    "./tsc-dom-library": "./tsc-dom-library.json",
+    "./tsc-dom-library-monorepo": "./tsc-dom-library-monorepo.json",
+    "./tsc-no-dom-app": "./tsc-no-dom-app.json",
+    "./tsc-no-dom-library": "./tsc-no-dom-library.json",
+    "./tsc-no-dom-library-monorepo": "./tsc-no-dom-library-monorepo.json",
+    "./nextjs": "./nextjs.json",
+    "./react-library": "./react-library.json"
+  }
+}
