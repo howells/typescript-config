@@ -1,5 +1,5 @@
 {
-  "name": "@howells/tsconfig",
+  "name": "@howells/typescript-config",
   "version": "0.1.0",
   "description": "Pinned wrappers and overlays around @total-typescript/tsconfig.",
   "license": "MIT",

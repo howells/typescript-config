@@ -1,4 +1,4 @@
-# `@howells/tsconfig`
+# `@howells/typescript-config`
 
 Pinned wrappers and thin overlays around `@total-typescript/tsconfig`.
 
@@ -11,32 +11,32 @@ The goal is not to invent a second tsconfig philosophy. The goal is to:
 ## Install
 
 ```bash
-npm install -D @howells/tsconfig
+npm install -D @howells/typescript-config
 ```
 
 ## Core Presets
 
 These map directly to the Total TypeScript decision tree:
 
-- `@howells/tsconfig/bundler-dom-app`
-- `@howells/tsconfig/bundler-dom-library`
-- `@howells/tsconfig/bundler-dom-library-monorepo`
-- `@howells/tsconfig/bundler-no-dom-app`
-- `@howells/tsconfig/bundler-no-dom-library`
-- `@howells/tsconfig/bundler-no-dom-library-monorepo`
-- `@howells/tsconfig/tsc-dom-app`
-- `@howells/tsconfig/tsc-dom-library`
-- `@howells/tsconfig/tsc-dom-library-monorepo`
-- `@howells/tsconfig/tsc-no-dom-app`
-- `@howells/tsconfig/tsc-no-dom-library`
-- `@howells/tsconfig/tsc-no-dom-library-monorepo`
+- `@howells/typescript-config/bundler-dom-app`
+- `@howells/typescript-config/bundler-dom-library`
+- `@howells/typescript-config/bundler-dom-library-monorepo`
+- `@howells/typescript-config/bundler-no-dom-app`
+- `@howells/typescript-config/bundler-no-dom-library`
+- `@howells/typescript-config/bundler-no-dom-library-monorepo`
+- `@howells/typescript-config/tsc-dom-app`
+- `@howells/typescript-config/tsc-dom-library`
+- `@howells/typescript-config/tsc-dom-library-monorepo`
+- `@howells/typescript-config/tsc-no-dom-app`
+- `@howells/typescript-config/tsc-no-dom-library`
+- `@howells/typescript-config/tsc-no-dom-library-monorepo`
 
 ## Overlays
 
 These are intentionally small:
 
-- `@howells/tsconfig/nextjs`
-- `@howells/tsconfig/react-library`
+- `@howells/typescript-config/nextjs`
+- `@howells/typescript-config/react-library`
 
 ## Examples
 
@@ -44,7 +44,7 @@ Next.js app:
 
 ```json
 {
-  "extends": "@howells/tsconfig/nextjs"
+  "extends": "@howells/typescript-config/nextjs"
 }
 ```
 
@@ -52,7 +52,7 @@ React package in a monorepo:
 
 ```json
 {
-  "extends": "@howells/tsconfig/react-library"
+  "extends": "@howells/typescript-config/react-library"
 }
 ```
 
@@ -60,7 +60,7 @@ Non-DOM app checked by TypeScript but built elsewhere:
 
 ```json
 {
-  "extends": "@howells/tsconfig/bundler-no-dom-app"
+  "extends": "@howells/typescript-config/bundler-no-dom-app"
 }
 ```
 
@@ -68,7 +68,7 @@ Library emitted by `tsc`:
 
 ```json
 {
-  "extends": "@howells/tsconfig/tsc-no-dom-library"
+  "extends": "@howells/typescript-config/tsc-no-dom-library"
 }
 ```
 

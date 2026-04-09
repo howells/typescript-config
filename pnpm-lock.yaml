@@ -1,0 +1,22 @@
+lockfileVersion: '9.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+importers:
+
+  .:
+    dependencies:
+      '@total-typescript/tsconfig':
+        specifier: 1.0.4
+        version: 1.0.4
+
+packages:
+
+  '@total-typescript/tsconfig@1.0.4':
+    resolution: {integrity: sha512-fO4ctMPGz1kOFOQ4RCPBRBfMy3gDn+pegUfrGyUFRMv/Rd0ZM3/SHH3hFCYG4u6bPLG8OlmOGcBLDexvyr3A5w==}
+
+snapshots:
+
+  '@total-typescript/tsconfig@1.0.4': {}
