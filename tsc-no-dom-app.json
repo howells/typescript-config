@@ -1,5 +1,5 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
   "display": "Howells TSC No DOM App",
-  "extends": "@total-typescript/tsconfig/tsc/no-dom/app"
+  "extends": "@total-typescript/tsconfig/tsc/no-dom/app.json"
 }
