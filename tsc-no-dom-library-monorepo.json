@@ -1,5 +1,25 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
   "display": "Howells TSC No DOM Library Monorepo",
-  "extends": "../../@total-typescript/tsconfig/tsc/no-dom/library-monorepo.json"
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "target": "es2022",
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "moduleDetection": "force",
+    "isolatedModules": true,
+    "verbatimModuleSyntax": true,
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
+    "module": "NodeNext",
+    "sourceMap": true,
+    "declaration": true,
+    "composite": true,
+    "declarationMap": true,
+    "lib": [
+      "es2022"
+    ]
+  }
 }

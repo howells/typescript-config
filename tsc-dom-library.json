@@ -1,5 +1,25 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
   "display": "Howells TSC DOM Library",
-  "extends": "../../@total-typescript/tsconfig/tsc/dom/library.json"
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "target": "es2022",
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "moduleDetection": "force",
+    "isolatedModules": true,
+    "verbatimModuleSyntax": true,
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
+    "module": "NodeNext",
+    "sourceMap": true,
+    "declaration": true,
+    "lib": [
+      "es2022",
+      "dom",
+      "dom.iterable"
+    ]
+  }
 }
