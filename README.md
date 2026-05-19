@@ -1,23 +1,24 @@
 # `@howells/typescript-config`
 
-Pinned wrappers and thin overlays around `@total-typescript/tsconfig`.
+Self-contained TypeScript config presets based on the Total TypeScript decision tree.
 
 The goal is not to invent a second tsconfig philosophy. The goal is to:
 
-- pin a specific upstream `@total-typescript/tsconfig` version
+- keep public preset names stable across projects
 - give every consumer the same decision matrix
+- avoid fragile transitive `extends` resolution in tools that parse `tsconfig.json` themselves
 - keep only a few house overlays for framework and runtime cases
 
 ## Why Use This Instead Of The Upstream Package?
 
 If `@total-typescript/tsconfig` already works for you directly, use it directly.
 
-This package exists for teams that want a small amount of centralisation without creating a second config system.
+This package exists for teams that want a small amount of centralisation without creating a second config system. The public presets are self-contained so consumers do not need `@total-typescript/tsconfig` to be resolvable from their own workspace.
 
 What it adds:
 
-- one pinned upstream version for every consumer in the workspace
-- stable package-local import paths like `@howells/typescript-config/nextjs` instead of wiring consumers to upstream path choices directly
+- stable package-local import paths like `@howells/typescript-config/nextjs`
+- config files that are safe for tools such as bundlers, CLIs, and config loaders that do not use TypeScript's exact package resolution behavior
 - a couple of thin house overlays for cases the upstream package does not name the way this repo wants to consume them
 - a documented migration path that keeps runtime and emit choices explicit at the leaf `tsconfig.json`
 
@@ -58,6 +59,7 @@ These are intentionally small:
 
 - `@howells/typescript-config/nextjs`
 - `@howells/typescript-config/react-library`
+- `@howells/typescript-config/mastra`
 
 ## Examples
 
@@ -74,6 +76,14 @@ React package in a monorepo:
 ```json
 {
   "extends": "@howells/typescript-config/react-library"
+}
+```
+
+Mastra package:
+
+```json
+{
+  "extends": "@howells/typescript-config/mastra"
 }
 ```
 
@@ -98,6 +108,7 @@ Library emitted by `tsc`:
 - Do not put consumer-local `paths` or `baseUrl` in these shared presets.
 - Do not put workspace-specific `types` in shared presets unless the preset is explicitly runtime-specific.
 - Do not reintroduce a universal `base.json` that hides runtime and emit decisions.
+- Do not reintroduce public presets that only forward to a dependency package with `extends`.
 - Treat changes in compiler behavior as breaking changes when versioning this package.
 
 ## Upstream
