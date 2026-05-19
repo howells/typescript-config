@@ -22,7 +22,6 @@
     "./tsc-no-dom-library": "./tsc-no-dom-library.json",
     "./tsc-no-dom-library-monorepo": "./tsc-no-dom-library-monorepo.json",
     "./nextjs": "./nextjs.json",
-    "./react-library": "./react-library.json",
-    "./mastra": "./mastra.json"
+    "./react-library": "./react-library.json"
   }
 }

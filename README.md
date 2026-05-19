@@ -59,7 +59,6 @@ These are intentionally small:
 
 - `@howells/typescript-config/nextjs`
 - `@howells/typescript-config/react-library`
-- `@howells/typescript-config/mastra`
 
 ## Examples
 
@@ -76,14 +75,6 @@ React package in a monorepo:
 ```json
 {
   "extends": "@howells/typescript-config/react-library"
-}
-```
-
-Mastra package:
-
-```json
-{
-  "extends": "@howells/typescript-config/mastra"
 }
 ```
 
