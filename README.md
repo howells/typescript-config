@@ -30,6 +30,10 @@ What it does not add:
 
 In practice, this package is mainly useful when you want consistency, pinned upgrades, and a tiny amount of local naming policy across multiple apps and packages.
 
+## Language Baseline
+
+All presets target and include the `es2023` standard library. That keeps the shared TypeScript baseline aligned with modern lint rules that recommend ES2023 APIs such as immutable array helpers.
+
 ## Install
 
 ```bash
