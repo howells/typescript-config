@@ -7,6 +7,7 @@
     "*.json",
     "README.md"
   ],
+  "type": "module",
   "exports": {
     "./package.json": "./package.json",
     "./bundler-dom-app": "./bundler-dom-app.json",
@@ -23,5 +24,13 @@
     "./tsc-no-dom-library-monorepo": "./tsc-no-dom-library-monorepo.json",
     "./nextjs": "./nextjs.json",
     "./react-library": "./react-library.json"
+  },
+  "scripts": {
+    "lint": "howells-ox-check --config=oxlint.config.ts *.json oxlint.config.ts oxfmt.config.ts",
+    "lint:fix": "howells-ox-fix --config=oxlint.config.ts *.json oxlint.config.ts oxfmt.config.ts",
+    "format": "howells-oxfmt --write *.json oxlint.config.ts oxfmt.config.ts README.md MIGRATIONS.md"
+  },
+  "devDependencies": {
+    "@howells/lint": "^0.2.1"
   }
 }

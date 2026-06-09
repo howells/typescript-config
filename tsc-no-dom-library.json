@@ -17,8 +17,6 @@
     "moduleResolution": "NodeNext",
     "sourceMap": true,
     "declaration": true,
-    "lib": [
-      "es2023"
-    ]
+    "lib": ["es2023"]
   }
 }

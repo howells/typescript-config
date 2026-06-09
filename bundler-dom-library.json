@@ -16,10 +16,6 @@
     "module": "preserve",
     "moduleResolution": "bundler",
     "noEmit": true,
-    "lib": [
-      "es2023",
-      "dom",
-      "dom.iterable"
-    ]
+    "lib": ["es2023", "dom", "dom.iterable"]
   }
 }

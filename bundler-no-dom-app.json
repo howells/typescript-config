@@ -16,8 +16,6 @@
     "module": "preserve",
     "moduleResolution": "bundler",
     "noEmit": true,
-    "lib": [
-      "es2023"
-    ]
+    "lib": ["es2023"]
   }
 }
