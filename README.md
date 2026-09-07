@@ -106,6 +106,17 @@ Library emitted by `tsc`:
 - Do not reintroduce public presets that only forward to a dependency package with `extends`.
 - Treat changes in compiler behavior as breaking changes when versioning this package.
 
+## Compiler compatibility
+
+The presets are checked against native TypeScript 7.0.2 and the supported
+TypeScript 6 compatibility package (`@typescript/typescript6` 6.0.2). Run
+`pnpm test` to check all 14 presets from a packed package, including declaration
+and composite builds, JSX, DOM boundaries, and known-invalid inputs.
+
+The package supplies configuration only. Each consumer chooses its compiler and
+runtime globals. See [migration notes](./MIGRATIONS.md) for the native compiler
+and JavaScript compiler API boundary.
+
 ## Upstream
 
 This package follows Matt Pocock's guidance and wraps:

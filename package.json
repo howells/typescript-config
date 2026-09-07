@@ -5,7 +5,8 @@
   "license": "MIT",
   "files": [
     "*.json",
-    "README.md"
+    "README.md",
+    "MIGRATIONS.md"
   ],
   "type": "module",
   "exports": {
@@ -26,11 +27,14 @@
     "./react-library": "./react-library.json"
   },
   "scripts": {
-    "lint": "howells-ox-check --config=oxlint.config.ts *.json oxlint.config.ts oxfmt.config.ts",
-    "lint:fix": "howells-ox-fix --config=oxlint.config.ts *.json oxlint.config.ts oxfmt.config.ts",
-    "format": "howells-oxfmt --write *.json oxlint.config.ts oxfmt.config.ts README.md MIGRATIONS.md"
+    "lint": "howells-ox-check --config=oxlint.config.ts *.json oxlint.config.ts oxfmt.config.ts scripts",
+    "lint:fix": "howells-ox-fix --config=oxlint.config.ts *.json oxlint.config.ts oxfmt.config.ts scripts",
+    "format": "howells-oxfmt --write *.json oxlint.config.ts oxfmt.config.ts README.md MIGRATIONS.md scripts",
+    "test": "node scripts/check-presets.mjs"
   },
   "devDependencies": {
-    "@howells/lint": "^0.2.1"
+    "@howells/lint": "^0.2.1",
+    "@typescript/typescript6": "6.0.2",
+    "typescript": "7.0.2"
   }
 }
