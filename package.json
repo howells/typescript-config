@@ -36,5 +36,6 @@
     "@howells/lint": "^0.2.1",
     "@typescript/typescript6": "6.0.2",
     "typescript": "7.0.2"
-  }
+  },
+  "packageManager": "pnpm@11.5.2"
 }
