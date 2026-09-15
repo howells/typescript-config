@@ -33,14 +33,10 @@ for (;;) {
     break;
   }
   if (response.status !== 404) {
-    throw new Error(
-      `Registry returned ${response.status} for ${name}@${version}`
-    );
+    throw new Error(`Registry returned ${response.status} for ${name}@${version}`);
   }
   if (Date.now() >= deadline) {
-    throw new Error(
-      `${name}@${version} was still 404 after ${TIMEOUT_MS / 60_000} minutes`
-    );
+    throw new Error(`${name}@${version} was still 404 after ${TIMEOUT_MS / 60_000} minutes`);
   }
   console.log(`Waiting for ${name}@${version} to become available...`);
   await wait(INTERVAL_MS);
@@ -48,14 +44,9 @@ for (;;) {
 if (published.name !== name || published.version !== version) {
   throw new Error(`Registry metadata does not match ${name}@${version}`);
 }
-const consumerRoot = await mkdtemp(
-  join(tmpdir(), "howells-typescript-config-published-consumer-")
-);
+const consumerRoot = await mkdtemp(join(tmpdir(), "howells-typescript-config-published-consumer-"));
 try {
-  await writeFile(
-    join(consumerRoot, "package.json"),
-    JSON.stringify({ private: true })
-  );
+  await writeFile(join(consumerRoot, "package.json"), JSON.stringify({ private: true }));
   // The resolver lags the packument: npm reported ETARGET for a version the
   // registry document already listed. Same window, same treatment.
   for (;;) {
@@ -70,7 +61,7 @@ try {
           "--no-package-lock",
           `${name}@${version}`,
         ],
-        { cwd: consumerRoot, stdio: "pipe" }
+        { cwd: consumerRoot, stdio: "pipe" },
       );
       break;
     } catch (error) {
