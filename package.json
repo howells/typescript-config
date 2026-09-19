@@ -29,9 +29,9 @@
   "scripts": {
     "lint": "howells-ox-check --config=oxlint.config.ts *.json oxlint.config.ts oxfmt.config.ts scripts",
     "lint:fix": "howells-ox-fix --config=oxlint.config.ts *.json oxlint.config.ts oxfmt.config.ts scripts",
-    "format": "howells-oxfmt --write *.json oxlint.config.ts oxfmt.config.ts README.md MIGRATIONS.md scripts",
-    "test": "node scripts/check-presets.mjs",
     "prepare": "howells-husky",
+    "prepush": "pnpm typecheck && pnpm lint && pnpm test",
+    "test": "node scripts/check-presets.mjs",
     "typecheck": "tsc --noEmit --module esnext --moduleResolution bundler --target es2023 --strict --skipLibCheck oxlint.config.ts oxfmt.config.ts"
   },
   "devDependencies": {
@@ -43,6 +43,9 @@
   },
   "lint-staged": {
     "*.{js,ts,jsx,tsx,json,jsonc,css,md,mdx}": "howells-oxfmt --write"
+  },
+  "engines": {
+    "node": ">=24.15.0"
   },
   "packageManager": "pnpm@11.5.2"
 }
