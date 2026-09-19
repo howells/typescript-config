@@ -35,7 +35,7 @@
     "typecheck": "tsc --noEmit --module esnext --moduleResolution bundler --target es2023 --strict --skipLibCheck oxlint.config.ts oxfmt.config.ts"
   },
   "devDependencies": {
-    "@howells/husky": "^0.2.3",
+    "@howells/husky": "^0.2.5",
     "@howells/lint": "^0.2.1",
     "@typescript/typescript6": "6.0.2",
     "lint-staged": "^17.5.1",
