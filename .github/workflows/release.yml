@@ -115,7 +115,7 @@ jobs:
       - name: Verify and pack
         run: |
           set -euo pipefail
-          pnpm lint
+          pnpm lint:ratchet
           pnpm test
           mkdir -p "$GITHUB_WORKSPACE/release-artifacts"
           pnpm pack --pack-destination "$GITHUB_WORKSPACE/release-artifacts"
