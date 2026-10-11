@@ -1,8 +1,12 @@
 {
   "name": "@howells/typescript-config",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "Self-contained TypeScript config presets.",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/howells/typescript-config.git"
+  },
   "files": [
     "*.json",
     "!lint-baseline.json",
