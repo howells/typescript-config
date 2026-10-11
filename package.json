@@ -6,8 +6,7 @@
   "files": [
     "*.json",
     "!lint-baseline.json",
-    "README.md",
-    "MIGRATIONS.md"
+    "README.md"
   ],
   "type": "module",
   "exports": {
@@ -40,7 +39,6 @@
   "devDependencies": {
     "@howells/husky": "^0.2.5",
     "@howells/lint": "^3.5.1",
-    "@typescript/typescript6": "6.0.2",
     "lint-staged": "^17.5.1",
     "typescript": "7.0.2"
   },
