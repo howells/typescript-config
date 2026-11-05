@@ -32,13 +32,13 @@
   "scripts": {
     "lint": "howells-check *.json oxlint.config.ts oxfmt.config.ts scripts",
     "lint:fix": "howells-fix *.json oxlint.config.ts oxfmt.config.ts scripts",
-    "prepare": "howells-husky",
+    "prepare": "husky",
     "test": "node scripts/check-presets.mjs",
     "typecheck": "tsc --noEmit --module esnext --moduleResolution bundler --target es2023 --strict --skipLibCheck oxlint.config.ts oxfmt.config.ts"
   },
   "devDependencies": {
-    "@howells/husky": "^0.2.5",
     "@howells/lint": "^3.5.1",
+    "husky": "^9.1.7",
     "lint-staged": "^17.5.1",
     "typescript": "7.0.2"
   },
