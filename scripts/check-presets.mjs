@@ -21,11 +21,13 @@ const writeJson = (path, value) => writeFileSync(path, `${JSON.stringify(value, 
 
 try {
   // Exercise the published package layout, not source-relative extends paths.
-  const [packed] = JSON.parse(
-    execFileSync("npm", ["pack", "--ignore-scripts", "--json", "--pack-destination", temporary], {
-      cwd: root,
-      encoding: "utf-8",
-    }),
+  const [packed] = Object.values(
+    JSON.parse(
+      execFileSync("npm", ["pack", "--ignore-scripts", "--json", "--pack-destination", temporary], {
+        cwd: root,
+        encoding: "utf-8",
+      }),
+    ),
   );
   execFileSync("tar", ["-xzf", join(temporary, packed.filename), "-C", temporary]);
   mkdirSync(join(temporary, "node_modules", "@howells"), { recursive: true });
