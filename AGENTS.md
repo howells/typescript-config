@@ -14,12 +14,12 @@ Don't overwrite others' uncommitted work.
 
 ### Issue tracker
 
-Linear, workspace howells, team Howells (HOW). See docs/agents/issue-tracker.md.
+Linear, workspace `howells`, team `HOW`. See `~/Sites/home/docs/agents/issue-tracker.md`.
 
 ### Triage labels
 
-Default triage labels. See ~/Sites/home/docs/agents/triage-labels.md.
+Default triage labels. See `~/Sites/home/docs/agents/triage-labels.md`.
 
 ### Domain docs
 
-Single-context. See ~/Sites/home/docs/agents/domain.md.
+Single-context. See `~/Sites/home/docs/agents/domain.md`.
